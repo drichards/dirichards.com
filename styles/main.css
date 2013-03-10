@@ -1,5 +1,3 @@
-#info, #work, #colophon { display: none; }
-
 /*******************************************/
 /* FONTS                                   */
 /*******************************************/
@@ -10,6 +8,18 @@
          url('fonts/Rokkitt-webfont.woff') format('woff'),
          url('fonts/Rokkitt-webfont.ttf') format('truetype'),
          url('fonts/Rokkitt-webfont.svg#RokkittRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'JustusItalic';
+    src: url('fonts/justus-italic-webfont.eot');
+    src: url('fonts/justus-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/justus-italic-webfont.woff') format('woff'),
+         url('fonts/justus-italic-webfont.ttf') format('truetype'),
+         url('fonts/justus-italic-webfont.svg#justusitalic') format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -52,7 +62,7 @@ a:hover {
 }
 
 .main h1 {
-    font-family: Chaparral, Rockwell, Garamond, serif;
+    font-family: JustusItalic, Rockwell, Garamond, serif;
     font-size: 25px;
     color: #000;
     font-style: italic;
@@ -73,6 +83,7 @@ a:hover {
 .main ul.links {
     list-style: none;
     margin-left: -60px;
+    font-family: Rokkitt, Rockwell, Garamond, serif;
 }
 
 .main ul.links li {
@@ -80,7 +91,8 @@ a:hover {
     padding-left: 60px;
     background-repeat: no-repeat;
     background-position: left center;
-    line-height: 43px;
+    line-height: 48px;
+    font-size: 17px;
 }
 
 .main ul.links li.email {
@@ -97,19 +109,23 @@ a:hover {
 
 .main ul.links li.github {
     background-image: url('images/github.png');
+    margin-left: -8px;
+    padding-left: 68px;
 }
 
 .main ul.links li.linkedin {
-    background-image: url('images/linkedin.png');
+    background-image: url('images/linkedin.gif');
 }
 
 .main ul.links li a {
-    letter-spacing: 2px;
     font-weight: bold;
+    font-family: Rokkitt, Rockwell, Garamond, serif;
 }
 
 #frames > div {
     padding-bottom: 125px;
+    margin-top: 100px;
+    z-index: 0;
 }
 
 
@@ -117,8 +133,12 @@ a:hover {
 /* HEADER + MENU BAR                       */
 /*******************************************/
 #header {
-    position: static;
+    position: fixed;
     height: 100px;
+    background-color: white;
+    z-index: 100;
+    top: 0px;
+    width: 100%;
 }
 
 #header .monogram {
