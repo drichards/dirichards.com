@@ -1,0 +1,219 @@
+#info, #work, #colophon { display: none; }
+
+/*******************************************/
+/* FONTS                                   */
+/*******************************************/
+@font-face {
+    font-family: 'Rokkitt';
+    src: url('fonts/Rokkitt-webfont.eot');
+    src: url('fonts/Rokkitt-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Rokkitt-webfont.woff') format('woff'),
+         url('fonts/Rokkitt-webfont.ttf') format('truetype'),
+         url('fonts/Rokkitt-webfont.svg#RokkittRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+    
+        
+/*******************************************/
+/* GENERAL                                 */
+/*******************************************/
+* {
+    padding: 0px;
+    margin: 0px;
+}
+    
+body {
+    font-family: "Century Gothic", arial, sans-serif;
+}
+
+a, a:visited {
+    color: #66cc66;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.content {
+    width: 1000px;
+    margin: auto;
+}
+
+
+.main {
+    width: 700px;
+    margin: auto;
+    font-size: 14px;
+    line-height: 1.5em;
+    color: #333;
+}
+
+.main h1 {
+    font-family: Chaparral, Rockwell, Garamond, serif;
+    font-size: 25px;
+    color: #000;
+    font-style: italic;
+    width: 100%;
+    text-align: center;
+    background-image: url('images/separator.png');
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    margin-top: 40px;
+    padding-bottom: 32px;
+    margin-bottom: 30px;
+}
+
+.main p, .main .links {
+    margin-bottom: 30px;
+}
+
+.main ul.links {
+    list-style: none;
+    margin-left: -60px;
+}
+
+.main ul.links li {
+    margin-bottom: 5px;
+    padding-left: 60px;
+    background-repeat: no-repeat;
+    background-position: left center;
+    line-height: 43px;
+}
+
+.main ul.links li.email {
+    background-image: url('images/email.gif');
+}
+
+.main ul.links li.twitter {
+    background-image: url('images/twitter.png');
+}
+
+.main ul.links li.pdf {
+    background-image: url('images/pdf.png');
+}
+
+.main ul.links li.github {
+    background-image: url('images/github.png');
+}
+
+.main ul.links li.linkedin {
+    background-image: url('images/linkedin.png');
+}
+
+.main ul.links li a {
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+#frames > div {
+    padding-bottom: 125px;
+}
+
+
+/*******************************************/
+/* HEADER + MENU BAR                       */
+/*******************************************/
+#header {
+    position: static;
+    height: 100px;
+}
+
+#header .monogram {
+    background-image: url('images/monogram.gif');
+    width: 110px;
+    height: 64px;
+    text-indent: -1000em;
+    font-size: 0px;
+    margin-top: 17px;
+    float: left;
+}
+
+#header .menu-bar {
+    list-style: none;
+    font-size: 24px;
+    margin-right: 20px;
+    float: right;
+}
+
+#header .menu-bar li {
+    float: left;
+    display: block;
+    width: 157px;
+}
+
+#header .menu-bar li a {
+    line-height: 100px;
+    vertical-align: middle;
+    text-align: center;
+    display: block;
+    width: 100%;
+    text-transform: uppercase;
+    font-family: Rokkitt, Rockwell, Garamond, serif;
+    font-size: 24px;
+    color: #262626;
+    
+    transition: background-color 0.5s;
+    -moz-transition: background-color 0.5s; /* Firefox 4 */
+    -webkit-transition: background-color 0.5s; /* Safari and Chrome */
+    -o-transition: background-color 0.5s; /* Opera */
+}
+
+#header .menu-bar li a.active, #header .menu-bar li a:hover {
+    background-color:  #CCFFCC;
+    text-decoration: none;
+}
+
+#header .menu-bar li a.active:hover {
+    background-color: #99CC99;
+}
+
+/*******************************************/
+/* INFO                                    */
+/*******************************************/
+
+#info .background {
+    width: 100%;
+    background-color: #333;
+    height: 400px;
+    position: absolute;
+}
+
+#info .intro {
+    height: 400px;
+    background-image: url('images/kittykat.jpg');
+    position: relative;
+}
+
+#info .intro h1 {
+    font-family: Rokkitt, Rockwell, Garamond, serif;
+    font-size: 72px;
+    color: #000;
+    position: absolute;
+    right: 38px;
+    top: 59px;
+}
+
+#info .intro h1 .asterisk {
+    font-size: 56px;
+    vertical-align: top;
+}
+
+#info .intro p {
+    font-size: 24px;
+    line-height: 1.5em;
+    color: #000;
+    position: absolute;
+    right: 73px;
+    top: 130px;
+    width: 330px;
+    text-align: right;
+}
+
+#info p.subtext {
+    font-size: 12px;
+    margin-left: 20px;
+    margin-top: 5px;
+}
