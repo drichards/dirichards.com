@@ -19,30 +19,8 @@ define(['components/flight/lib/component'],
                 frame.css("transition", "top 0s");
                 frame.css("top", currentFrame.outerHeight()).show();
                 
-                // background hack...
-                /*if (data.key == "info") { 
-                    background.css("transition", "top 0s")
-                    background.css({
-                        "top": currentFrame.outerHeight()
-                    });
-                    
-                    console.debug(currentFrame.outerHeight());
-                    
-                    background.css({
-                        "transition": "top 2s",
-                        "top": "100px"
-                    });
-                } else {                          
-                    $("#background").css({
-                        "transition": "top 2s",
-                        "top": (-1 * currentFrame.outerHeight())
-                    });
-                }*/
-                
-                currentFrame.css({
-                    "transition": "top 2s",
-                    "top": (-1 * currentFrame.outerHeight())
-                });
+                currentFrame.css("transition", "top 2s");
+                currentFrame.css("top", (-1 * currentFrame.outerHeight()));
 
                 frame.css({
                     "transition": "top 2s",
@@ -50,7 +28,10 @@ define(['components/flight/lib/component'],
                 });
                 
                 currentFrame = frame;
-                this.$node.css("height", currentFrame.outerHeight());
+                this.$node.css({
+                    "transition": "height 2s",
+                    "height": currentFrame.outerHeight()
+                });
             }
             
             this.initializeFrames = function() {
@@ -58,6 +39,9 @@ define(['components/flight/lib/component'],
                     var id = this.id;
                     frames[id] = $(this);
                     frames[id].hide();
+                    // fix issue where firefox doesn't animate if
+                    // it doesn't have an inital value
+                    frames[id].css("top", 0);
                 });
                 
                 currentFrame = frames[this.attr.initialFrame];

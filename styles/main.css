@@ -33,6 +33,10 @@
     padding: 0px;
     margin: 0px;
 }
+
+html {
+    overflow-y: scroll;
+}
     
 body {
     font-family: "Century Gothic", arial, sans-serif;
@@ -74,6 +78,7 @@ a:hover {
     margin-top: 60px;
     padding-bottom: 32px;
     margin-bottom: 30px;
+    font-weight: normal;
 }
 
 .main p, .main .links {
@@ -134,6 +139,10 @@ a:hover {
     left: 50%;
     margin-left: -500px;
     min-height: 500px;
+    transition: top 2s;
+    -moz-transition: top 2s;
+    -webkit-transition: top 2s;
+    -o-transition: top 2s;
 }
 
 #frames > div > .content,  #frames > div > .main {
@@ -196,6 +205,7 @@ a:hover {
 #header .menu-bar li a.active, #header .menu-bar li a:hover {
     background-color:  #CCFFCC;
     text-decoration: none;
+    cursor: pointer;
 }
 
 #header .menu-bar li a.active:hover {
@@ -229,6 +239,7 @@ a:hover {
     position: absolute;
     right: 38px;
     top: 59px;
+    font-weight: normal;
 }
 
 #info .intro h1 .asterisk {
