@@ -7,6 +7,12 @@
     <script src='js/components/es5-shim/es5-shim.js'></script>
     <script src='js/components/es5-shim/es5-sham.js'></script>
     <script data-main="js/requireMain.js" src='js/components/requirejs/require.js'></script>
+    <script type="text/javascript">
+        require(['js/frame.js', 'js/menuBar.js'], function(Frame, MenuBar) {
+            Frame.attachTo('#frames');
+            MenuBar.attachTo('#header .menu-bar');
+        });
+    </script>
 </head>
 <body>
     <div id="header">
@@ -20,9 +26,12 @@
             </ul>
         </div>
     </div>
+
     <div id="frames">
-        <div id="info">
-            <div class="background"></div>
+
+        <div id="info" class="frame">
+            <div id="background"></div>
+
             <div class="content">
                 <div class="intro">
                     <h1>Hi, I'm Dave.<span class="asterisk">*</span></h1>
@@ -57,7 +66,7 @@
                 </div>
             </div>
         </div>
-        <div id="work" class="content">
+        <div id="work" class="content frame">
             <div class="main">
                 <h1>Work hard, play hard, and write some great code.</h1>
                 
@@ -76,7 +85,7 @@
                 
                 <ul class="links">
                     <li class="pdf">
-                        To download a full copy of my r&eacute;sum&eacute;, <a href="resume.pdf">click here.</a>
+                        To download a full copy of my resume, <a href="resume.pdf">click here.</a>
                     </li>
                     
                     <li class="email">
@@ -85,7 +94,7 @@
                 </ul>
             </div>
         </div>
-        <div id="contact" class="content">
+        <div id="contact" class="content frame">
             <div class="main">
                 <h1>Want to talk? Let's get in touch.</h1>
                 
@@ -112,7 +121,7 @@
                 </ul>
             </div>
         </div>
-        <div id="colophon" class="content">
+        <div id="colophon" class="content frame">
             <div class="main">
                 <h1>A note about this website.</h1>
                 

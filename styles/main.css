@@ -71,7 +71,7 @@ a:hover {
     background-image: url('images/separator.png');
     background-repeat: no-repeat;
     background-position: bottom center;
-    margin-top: 40px;
+    margin-top: 60px;
     padding-bottom: 32px;
     margin-bottom: 30px;
 }
@@ -122,9 +122,18 @@ a:hover {
     font-family: Rokkitt, Rockwell, Garamond, serif;
 }
 
+#frames {
+    overflow: hidden;
+    position: relative;
+}
+
 #frames > div {
     padding-bottom: 125px;
     z-index: 0;
+    position: absolute;
+    left: 50%;
+    margin-left: -500px;
+    min-height: 500px;
 }
 
 #frames > div > .content,  #frames > div > .main {
@@ -193,17 +202,19 @@ a:hover {
     background-color: #99CC99;
 }
 
-/*******************************************/
-/* INFO                                    */
-/*******************************************/
-
-#info .background {
-    width: 100%;
+#background {
+    width: 5000px;
     background-color: #333;
     height: 400px;
     position: absolute;
     top: 100px;
+    left: -2000px;
 }
+
+
+/*******************************************/
+/* INFO                                    */
+/*******************************************/
 
 #info .intro {
     height: 400px;
